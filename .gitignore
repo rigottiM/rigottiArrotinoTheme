@@ -1,1 +1,9 @@
 node_modules/
+
+*.sublime-workspace
+
+*.sublime-project
+
+_dev/package.json
+
+_dev/package.json
