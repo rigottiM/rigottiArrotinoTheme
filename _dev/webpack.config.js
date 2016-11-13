@@ -44,6 +44,7 @@ module.exports = [{
       test: /\.scss$/,
       loader: ExtractTextPlugin.extract(
         "style",
+        "css-loader?sourceComments!postcss!sass-loader?sourceComments"
       )
     }, {
       test: /.(png|woff(2)?|eot|ttf|svg)(\?[a-z0-9=\.]+)?$/,
