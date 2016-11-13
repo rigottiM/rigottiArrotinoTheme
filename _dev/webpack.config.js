@@ -1,14 +1,30 @@
 var webpack = require('webpack');
+var path = require('path');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 var plugins = [];
 
+var production = false;
+
+if (production) {
+  plugins.push(
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      }
+    })
+  );
+}
+
 plugins.push(
-  new ExtractTextPlugin('../css/theme.css')
+  new ExtractTextPlugin(
+    path.join(
+      '..', 'css', 'theme.css'
+    )
+  )
 );
 
-module.exports = [{
-  // JavaScript
+module.exports = {
   entry: [
     './js/theme.js'
   ],
@@ -21,59 +37,29 @@ module.exports = [{
       test: /\.js$/,
       exclude: /node_modules/,
       loaders: ['babel-loader']
-    }]
-  },
-  externals: {
-    prestashop: 'prestashop'
-  },
-  plugins: plugins,
-  resolve: {
-    extensions: ['', '.js']
-  }
-}, {
-  // CSS
-  entry: [
-    './css/normalize.css',
-    './css/example.less',
-    './css/st/dev.styl',
-    './css/theme.scss'
-  ],
-  output: {
-    path: '../assets/js',
-    filename: 'theme.js'
-  },
-  module: {
-    loaders: [{
+    }, {
       test: /\.scss$/,
       loader: ExtractTextPlugin.extract(
         "style",
-        "css-loader?sourceMap!postcss!sass-loader?sourceMap"
-      )
-    }, {
-      test: /\.styl$/,
-      loader: ExtractTextPlugin.extract(
-        "style",
-        "css-loader?sourceMap!postcss!stylus-loader?sourceMap"
-      )
-    }, {
-      test: /\.less$/,
-      loader: ExtractTextPlugin.extract(
-        "style",
-        "css-loader?sourceMap!postcss!less-loader?sourceMap"
-      )
-    }, {
-      test: /\.css$/,
-      loader: ExtractTextPlugin.extract(
-        'style',
-        'css-loader?sourceMap!postcss-loader'
+        "css?sourceMap!postcss!sass?sourceMap"
       )
     }, {
       test: /.(png|woff(2)?|eot|ttf|svg)(\?[a-z0-9=\.]+)?$/,
       loader: 'file-loader?name=../css/[hash].[ext]'
+    }, {
+      test: /\.css$/,
+      loader: "style-loader!css-loader!postcss-loader"
     }]
   },
+  postcss: function() {
+    return [require('postcss-flexibility')];
+  },
+  externals: {
+    prestashop: 'prestashop'
+  },
+  devtool: 'source-map',
   plugins: plugins,
   resolve: {
-    extensions: ['', '.scss', '.styl', '.less', '.css']
+    extensions: ['', '.js', '.scss']
   }
-}];
+};
