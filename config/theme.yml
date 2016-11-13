@@ -1,10 +1,8 @@
-name: StarterTheme
-display_name: Starter Theme
+name: rigottiArrotinoTheme
+display_name: Rigotti Arrotino Theme
 version: 1.0.0
 author:
-  name: "PrestaShop Team"
-  email: "pub@prestashop.com"
-  url: "http://www.prestashop.com"
+  name: "Matteo Rigotti"
 
 meta:
   compatibility:
