@@ -20,12 +20,16 @@ module.exports = [{
     loaders: [{
       test: /\.js$/,
       exclude: /node_modules/,
-      loaders: ['babel-loader']
+      loader: "babel-loader",
+      query: {
+        presets: ['es2015']
+      }
     }]
   },
   externals: {
     prestashop: 'prestashop'
   },
+  devtool: 'source-map',
   plugins: plugins,
   resolve: {
     extensions: ['', '.js']
