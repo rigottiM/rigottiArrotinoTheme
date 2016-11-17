@@ -1,0 +1,13 @@
+@import "partials/_burger-menu";
+
+.main-header {
+	.header-top {
+		height: $top-header-height;
+
+
+	}
+
+	.header-bottom {
+		height: $bottom-header-height;
+	}
+}

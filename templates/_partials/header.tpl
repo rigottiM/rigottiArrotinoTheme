@@ -1,26 +1,35 @@
 {block name='header_banner'}
-  <div class="header-banner">
-    {hook h='displayBanner'}
-  </div>
-{/block}
-
-{block name='header_nav'}
-  <div class="header-nav">
-    {hook h='displayNav'}
-  </div>
-{/block}
-
-{block name='header_logo'}
-  <a class="logo" href="{$urls.base_url}" title="{$shop.name}">
-    <img src="{$shop.logo}" alt="{$shop.name}">
-  </a>
+	<div class="header-banner">
+		{hook h='displayBanner'}
+	</div>
 {/block}
 
 {block name='header_top'}
-  <div class="header-top">
-    {hook h='displayTop'}
-  </div>
+	<div class="header-top">
+		<div class="burger-menu">
+			<div class="burger-click-region">
+				<span class="burger-menu-piece"></span>
+				<span class="burger-menu-piece"></span>
+				<span class="burger-menu-piece"></span>
+			</div>
+			<span class="burger-menu-txt">MENU</span>
+		</div>
+		<a class="logo" href="{$urls.base_url}" title="{$shop.name}">
+			<img src="{$shop.logo}" alt="{$shop.name}">
+		</a>
+		<div class="header-nav">
+			{hook h='displayNav'}
+		</div>
+	</div>
+{/block}
 
-  {hook h='displayNavFullWidth'}
+{block name='header_bottom'}
+ 	<div class="header-bottom">
+ 	</div>
+{/block}
 
+{block name='side-menu'}
+ 	<div class="side-menu">
+		{hook h='displayTop'}
+ 	</div>
 {/block}

@@ -1,0 +1,133 @@
+$menu-piece-width: 40px;
+$menu-piece-height: 4px;
+$menu-piece-space-between: 6px;
+$menu-piece-border-radius: 2px;
+$menu-txt-initial-font-size: 12px;
+$menu-txt-active-font-size: 20px;
+$menu-animation-duration: 400ms;
+$menu-animation-timing: cubic-bezier(.42,0,.58,1);
+
+.burger-menu {
+	position: relative;
+	width: $menu-piece-width;
+	height: 40px;
+	margin: 0 auto;
+	text-transform: uppercase;
+}
+
+.burger-click-region {
+	width: 100%;
+	height: ($menu-piece-height) * 3 + ($menu-piece-space-between) * 2;
+	cursor: pointer;
+}
+
+.burger-menu-txt {
+	display: block;
+	position: absolute;
+	font-size: $menu-txt-initial-font-size;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: auto;
+	text-align: center;
+	transition: all $menu-animation-duration $menu-animation-timing;
+	
+	.is-open & {
+		//opacity: 0;
+		font-size: $menu-txt-active-font-size;
+		transform: translate3d($menu-piece-width +$menu-piece-height + $menu-piece-space-between, -16px, 0);
+	}
+}
+
+.burger-menu-piece {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: $menu-piece-height;
+	background-color: black;
+	border-radius: $menu-piece-border-radius;
+	transform-origin: 50% 50%;
+	transition: transform $menu-animation-duration $menu-animation-timing;
+	
+	&:nth-child(1) {
+		top: 0;
+	}
+	
+	&:nth-child(2) {
+		top: $menu-piece-height + $menu-piece-space-between;
+		opacity: 1;
+		transition: transform $menu-animation-duration $menu-animation-timing, opacity 0ms linear $menu-animation-duration / 2;
+	}
+	
+	&:nth-child(3) {
+		top: ($menu-piece-height + $menu-piece-space-between) * 2;
+	}
+	
+	.active & {
+		
+			&:nth-child(1) {
+				animation: burger-open-top $menu-animation-duration $menu-animation-timing forwards;
+			}
+		
+			&:nth-child(2) {
+				opacity: 0;
+				transition: transform $menu-animation-duration $menu-animation-timing, opacity 0ms linear $menu-animation-duration / 2;
+			}
+		
+			&:nth-child(3) {
+				animation: burger-open-bot $menu-animation-duration $menu-animation-timing forwards;
+			}
+	}
+	
+	.closing & {
+		&:nth-child(1) {
+			animation: burger-close-top $menu-animation-duration $menu-animation-timing forwards;
+		}
+		
+		&:nth-child(3) {
+			animation: burger-close-bot $menu-animation-duration $menu-animation-timing forwards;
+		}
+	}
+}
+
+@keyframes burger-open-top {
+	50% {
+		transform: translate3d(0,$menu-piece-height + $menu-piece-space-between, 0);
+	}
+	100% {
+		transform: translate3d(0,$menu-piece-height + $menu-piece-space-between, 0) rotate(45deg);
+	}
+}
+
+@keyframes burger-open-bot {
+	50% {
+		transform: translate3d(0, -$menu-piece-height - $menu-piece-space-between, 0);
+	}
+	100% {
+		transform: translate3d(0, -$menu-piece-height - $menu-piece-space-between, 0) rotate(-45deg);
+	}
+}
+
+@keyframes burger-close-top {
+	0% {
+		transform: translate3d(0,$menu-piece-height + $menu-piece-space-between, 0) rotate(45deg);
+	}
+	50% {
+		transform: translate3d(0,$menu-piece-height + $menu-piece-space-between, 0) rotate(0deg);
+	}
+	100% {
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes burger-close-bot {
+	0% {
+		transform: translate3d(0, -$menu-piece-height - $menu-piece-space-between, 0) rotate(-45deg);
+	}
+	50% {
+		transform: translate3d(0, -$menu-piece-height - $menu-piece-space-between, 0) rotate(0deg);
+	}
+	100% {
+		transform: translate3d(0, 0, 0);
+	}
+}
