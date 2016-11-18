@@ -1,13 +1,18 @@
 @import "partials/_burger-menu";
 
-.main-header {
-	.header-top {
+#main-header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	.top-header {
 		height: $top-header-height;
-
+		background-color: $top-header-color;
 
 	}
 
-	.header-bottom {
+	.bottom-header {
 		height: $bottom-header-height;
+		background-color: $bottom-header-color;
+		opacity: 0.9;
 	}
 }

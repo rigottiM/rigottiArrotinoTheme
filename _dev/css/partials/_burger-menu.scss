@@ -1,6 +1,6 @@
-$menu-piece-width: 40px;
-$menu-piece-height: 4px;
-$menu-piece-space-between: 6px;
+$menu-piece-width: 30px;
+$menu-piece-height: 3px;
+$menu-piece-space-between: 4px;
 $menu-piece-border-radius: 2px;
 $menu-txt-initial-font-size: 12px;
 $menu-txt-active-font-size: 20px;
@@ -9,16 +9,16 @@ $menu-animation-timing: cubic-bezier(.42,0,.58,1);
 
 .burger-menu {
 	position: relative;
-	width: $menu-piece-width;
+	width: 40px;
 	height: 40px;
-	margin: 0 auto;
 	text-transform: uppercase;
 }
 
 .burger-click-region {
 	width: 100%;
-	height: ($menu-piece-height) * 3 + ($menu-piece-space-between) * 2;
+	height: 100%;
 	cursor: pointer;
+	position: absolute;
 }
 
 .burger-menu-txt {
@@ -42,8 +42,11 @@ $menu-animation-timing: cubic-bezier(.42,0,.58,1);
 .burger-menu-piece {
 	display: block;
 	position: absolute;
-	width: 100%;
+	width: $menu-piece-width;
 	height: $menu-piece-height;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
 	background-color: black;
 	border-radius: $menu-piece-border-radius;
 	transform-origin: 50% 50%;

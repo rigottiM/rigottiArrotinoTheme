@@ -5,7 +5,7 @@
 {/block}
 
 {block name='header_top'}
-	<div class="header-top">
+	<div class="top-header">
 		<div class="burger-menu">
 			<div class="burger-click-region">
 				<span class="burger-menu-piece"></span>
@@ -24,7 +24,7 @@
 {/block}
 
 {block name='header_bottom'}
- 	<div class="header-bottom">
+ 	<div class="bottom-header">
  	</div>
 {/block}
 

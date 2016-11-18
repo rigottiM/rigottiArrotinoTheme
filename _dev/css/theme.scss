@@ -4,3 +4,6 @@
 @import "partials/_commons";
 @import "components/header";
 
+#wrapper {
+	margin-top: $main-header-height;
+}

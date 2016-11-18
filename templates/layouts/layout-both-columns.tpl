@@ -11,7 +11,7 @@
 
     {hook h='displayAfterBodyOpeningTag'}
 
-    <header id="header">
+    <header id="main-header">
       {block name='header'}
         {include file='_partials/header.tpl'}
       {/block}
