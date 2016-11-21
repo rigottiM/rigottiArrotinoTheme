@@ -1,3 +1,6 @@
+//GENERAL
+$site-min-width: 320px;
+
 // COLORS
 $white: #fff;
 $black: #000;
@@ -9,7 +12,8 @@ $top-header-color: $white;
 $bottom-header-height: 30px;
 $bottom-header-color: #f4f3f7;
 $main-header-height: $top-header-height + $bottom-header-height;
-$logo-height: 45px;
+$logo-height-mobile: 35px;
+$logo-height-tabletDesktop: 45px;
 
 //MENU-LAYER
 $menu-layer-width-mobile: 250px;
@@ -18,9 +22,9 @@ $menu-animation-duration: 400ms;
 $menu-animation-timing: cubic-bezier(.42,0,.58,1);
 
 //MEDIA-QUERIES
-$mobileMediaQuery: only screen and (max-device-width: 767px);
-$tabletMediaQuery: only screen and (min-device-width: 768px) and (max-device-width: 1023px);
-$desktopMediaQuery: only screen and (min-device-width: 1024px);
+$mobileMediaQuery: "only screen and (max-device-width: 767px)";
+$tabletMediaQuery: "only screen and (min-device-width: 768px) and (max-device-width: 1023px)";
+$desktopMediaQuery: "only screen and (min-device-width: 1024px)";
 
 //Z-INDEX
 $header-z-index: 1000;

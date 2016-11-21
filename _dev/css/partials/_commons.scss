@@ -3,6 +3,7 @@ body {
 	margin: 0;
 	padding: 0;
 	width: 100%;
+	min-width: $site-min-width;
 	font-family: arial,sans-serif;
 	font-size: 14px;
 }

@@ -4,15 +4,17 @@
 #main-header {
 	position: fixed;
 	width: 100%;
+	min-width: $site-min-width;
 	top: 0;
+
 	.top-header {
 		height: $top-header-height;
 		background-color: $top-header-color;
 
 		.logo {
 			float: left;
-			height: $logo-height;
-			margin-top: ($top-header-height - $logo-height)/2;
+			height: $logo-height-mobile;
+			margin-top: ($top-header-height - $logo-height-mobile)/2;
 			margin-left: 90px;
 
 			img {
@@ -25,5 +27,16 @@
 		height: $bottom-header-height;
 		background-color: $bottom-header-color;
 		opacity: 0.9;
+	}
+}
+
+@media #{$tabletMediaQuery}, #{$desktopMediaQuery} {
+	#main-header {
+		.top-header {
+			.logo {
+				height: $logo-height-tabletDesktop;
+				margin-top: ($top-header-height - $logo-height-tabletDesktop)/2;
+			}
+		}
 	}
 }
