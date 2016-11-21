@@ -8,6 +8,16 @@
 		height: $top-header-height;
 		background-color: $top-header-color;
 
+		.logo {
+			float: left;
+			height: $logo-height;
+			margin-top: ($top-header-height - $logo-height)/2;
+			margin-left: 90px;
+
+			img {
+				height: 100%;
+			}
+		}
 	}
 
 	.bottom-header {

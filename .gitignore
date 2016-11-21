@@ -5,3 +5,5 @@ node_modules/
 *.sublime-project
 
 _dev/npm-debug.log
+
+npm-debug.log

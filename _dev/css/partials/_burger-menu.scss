@@ -1,3 +1,5 @@
+$menu-button-height: 40px;
+$menu-button-width: 40px;
 $menu-piece-width: 30px;
 $menu-piece-height: 3px;
 $menu-piece-space-between: 4px;
@@ -8,10 +10,12 @@ $menu-animation-duration: 400ms;
 $menu-animation-timing: cubic-bezier(.42,0,.58,1);
 
 .burger-menu {
-	position: relative;
-	width: 40px;
-	height: 40px;
+	position: fixed;
+	width: $menu-button-width;
+	height: $menu-button-height;
 	text-transform: uppercase;
+	top: ($top-header-height - $menu-button-height)/2;
+	left: 25px;
 }
 
 .burger-click-region {
@@ -25,6 +29,7 @@ $menu-animation-timing: cubic-bezier(.42,0,.58,1);
 	display: block;
 	position: absolute;
 	font-size: $menu-txt-initial-font-size;
+	line-height: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
@@ -33,9 +38,8 @@ $menu-animation-timing: cubic-bezier(.42,0,.58,1);
 	transition: all $menu-animation-duration $menu-animation-timing;
 	
 	.is-open & {
-		//opacity: 0;
 		font-size: $menu-txt-active-font-size;
-		transform: translate3d($menu-piece-width +$menu-piece-height + $menu-piece-space-between, -16px, 0);
+		transform: translate3d($menu-piece-width +$menu-piece-height + $menu-piece-space-between, -18.5px, 0);
 	}
 }
 
@@ -53,17 +57,17 @@ $menu-animation-timing: cubic-bezier(.42,0,.58,1);
 	transition: transform $menu-animation-duration $menu-animation-timing;
 	
 	&:nth-child(1) {
-		top: 0;
+		top: ($menu-button-height - $menu-piece-height * 3 - $menu-piece-space-between * 2) / 2;
 	}
 	
 	&:nth-child(2) {
-		top: $menu-piece-height + $menu-piece-space-between;
+		top: ($menu-button-height - $menu-piece-height) / 2;
 		opacity: 1;
 		transition: transform $menu-animation-duration $menu-animation-timing, opacity 0ms linear $menu-animation-duration / 2;
 	}
 	
 	&:nth-child(3) {
-		top: ($menu-piece-height + $menu-piece-space-between) * 2;
+		top: ($menu-button-height + $menu-piece-height + $menu-piece-space-between * 2) / 2;
 	}
 	
 	.active & {
