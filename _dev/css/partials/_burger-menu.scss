@@ -39,7 +39,7 @@ $menu-animation-timing: cubic-bezier(.42,0,.58,1);
 	
 	.is-open & {
 		font-size: $menu-txt-active-font-size;
-		transform: translate3d($menu-piece-width +$menu-piece-height + $menu-piece-space-between, -18.5px, 0);
+		transform: translate3d($menu-piece-width + $menu-piece-height + $menu-piece-space-between, -18.5px, 0);
 	}
 }
 
