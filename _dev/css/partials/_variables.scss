@@ -10,3 +10,20 @@ $bottom-header-height: 30px;
 $bottom-header-color: #f4f3f7;
 $main-header-height: $top-header-height + $bottom-header-height;
 $logo-height: 45px;
+
+//MENU-LAYER
+$menu-layer-width-mobile: 250px;
+$menu-layer-width-tabletDesktop: 350px;
+$menu-animation-duration: 400ms;
+$menu-animation-timing: cubic-bezier(.42,0,.58,1);
+
+//MEDIA-QUERIES
+$mobileMediaQuery: only screen and (max-device-width: 767px);
+$tabletMediaQuery: only screen and (min-device-width: 768px) and (max-device-width: 1023px);
+$desktopMediaQuery: only screen and (min-device-width: 1024px);
+
+//Z-INDEX
+$header-z-index: 1000;
+$menu-layer-bg-z-index: 2000;
+$menu-layer-content-z-index: 2010;
+$burger-menu-z-index: 2500;

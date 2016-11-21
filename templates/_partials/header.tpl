@@ -28,8 +28,11 @@
  	</div>
 {/block}
 
-{block name='side-menu'}
- 	<div class="side-menu">
-		{hook h='displayTop'}
+{block name='menu-layer'}
+ 	<div class="menu-layer">
+		<div class="menu-layer-content">
+			{hook h='displayTop'}
+		</div>
+		<div class="menu-layer-bg"></div>
  	</div>
 {/block}

@@ -5,7 +5,8 @@ import prestashop from 'prestashop';
 import EventEmitter from 'events';
 
 $(document).ready(() => {
-  let burgerMenuEl = $('.burger-click-region');
-  let burgerMenu = new BurgerMenu(burgerMenuEl);
-  burgerMenu.init();
+	var $burgerMenuEl = $('.burger-click-region'),
+		$burgerMenuTarget = $('.menu-layer'),
+		burgerMenu = new BurgerMenu($burgerMenuEl, $burgerMenuTarget);
+	burgerMenu.init();
 });

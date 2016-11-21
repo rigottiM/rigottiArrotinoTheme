@@ -73,9 +73,10 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	(0, _expose$ExposeJQueryJquery2.default)(document).ready(function () {
-	  var burgerMenuEl = (0, _expose$ExposeJQueryJquery2.default)('.burger-click-region');
-	  var burgerMenu = new _burgerMenu2.default(burgerMenuEl);
-	  burgerMenu.init();
+		var $burgerMenuEl = (0, _expose$ExposeJQueryJquery2.default)('.burger-click-region'),
+		    $burgerMenuTarget = (0, _expose$ExposeJQueryJquery2.default)('.menu-layer'),
+		    burgerMenu = new _burgerMenu2.default($burgerMenuEl, $burgerMenuTarget);
+		burgerMenu.init();
 	});
 
 /***/ },
@@ -9933,17 +9934,19 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
 	var BurgerMenu = function () {
-		function BurgerMenu(el) {
+		function BurgerMenu(el, target) {
 			_classCallCheck(this, BurgerMenu);
 	
 			this.el = el;
+			this.target = target;
 		}
 	
 		_createClass(BurgerMenu, [{
 			key: 'init',
 			value: function init() {
 				var clickDelay = 500,
-				    clickDelayTimer = null;
+				    clickDelayTimer = null,
+				    $target = this.target;
 	
 				this.el.on('click', function () {
 	
@@ -9952,13 +9955,16 @@
 						var $burger = (0, _jquery2.default)(this);
 						$burger.toggleClass('active');
 						$burger.parent().toggleClass('is-open');
+						$target.toggleClass('is-open');
 	
 						if (!$burger.hasClass('active')) {
 							$burger.addClass('closing');
+							$target.addClass('closing');
 						}
 	
 						clickDelayTimer = setTimeout(function () {
 							$burger.removeClass('closing');
+							$target.removeClass('closing');
 							clearTimeout(clickDelayTimer);
 							clickDelayTimer = null;
 						}, clickDelay);

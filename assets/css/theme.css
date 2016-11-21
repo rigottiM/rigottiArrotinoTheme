@@ -7,23 +7,24 @@ body {
   font-family: arial,sans-serif;
   font-size: 14px; }
 
-/* line 12, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_burger-menu.scss */
+/* line 10, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_burger-menu.scss */
 .burger-menu {
   position: fixed;
   width: 40px;
   height: 40px;
   text-transform: uppercase;
   top: 13px;
-  left: 25px; }
+  left: 25px;
+  z-index: 2500; }
 
-/* line 21, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_burger-menu.scss */
+/* line 20, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_burger-menu.scss */
 .burger-click-region {
   width: 100%;
   height: 100%;
   cursor: pointer;
   position: absolute; }
 
-/* line 28, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_burger-menu.scss */
+/* line 27, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_burger-menu.scss */
 .burger-menu-txt {
   display: block;
   position: absolute;
@@ -35,12 +36,12 @@ body {
   width: auto;
   text-align: center;
   transition: all 400ms cubic-bezier(0.42, 0, 0.58, 1); }
-  /* line 40, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_burger-menu.scss */
+  /* line 39, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_burger-menu.scss */
   .is-open .burger-menu-txt {
     font-size: 20px;
-    transform: translate3d(37px, -18.5px, 0); }
+    transform: translate3d(40px, -18.5px, 0); }
 
-/* line 46, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_burger-menu.scss */
+/* line 45, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_burger-menu.scss */
 .burger-menu-piece {
   display: block;
   position: absolute;
@@ -53,31 +54,31 @@ body {
   border-radius: 2px;
   transform-origin: 50% 50%;
   transition: transform 400ms cubic-bezier(0.42, 0, 0.58, 1); }
-  /* line 59, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_burger-menu.scss */
+  /* line 58, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_burger-menu.scss */
   .burger-menu-piece:nth-child(1) {
     top: 11.5px; }
-  /* line 63, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_burger-menu.scss */
+  /* line 62, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_burger-menu.scss */
   .burger-menu-piece:nth-child(2) {
     top: 18.5px;
     opacity: 1;
     transition: transform 400ms cubic-bezier(0.42, 0, 0.58, 1), opacity 0ms linear 200ms; }
-  /* line 69, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_burger-menu.scss */
+  /* line 68, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_burger-menu.scss */
   .burger-menu-piece:nth-child(3) {
     top: 25.5px; }
-  /* line 75, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_burger-menu.scss */
+  /* line 74, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_burger-menu.scss */
   .active .burger-menu-piece:nth-child(1) {
     animation: burger-open-top 400ms cubic-bezier(0.42, 0, 0.58, 1) forwards; }
-  /* line 79, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_burger-menu.scss */
+  /* line 78, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_burger-menu.scss */
   .active .burger-menu-piece:nth-child(2) {
     opacity: 0;
     transition: transform 400ms cubic-bezier(0.42, 0, 0.58, 1), opacity 0ms linear 200ms; }
-  /* line 84, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_burger-menu.scss */
+  /* line 83, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_burger-menu.scss */
   .active .burger-menu-piece:nth-child(3) {
     animation: burger-open-bot 400ms cubic-bezier(0.42, 0, 0.58, 1) forwards; }
-  /* line 90, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_burger-menu.scss */
+  /* line 89, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_burger-menu.scss */
   .closing .burger-menu-piece:nth-child(1) {
     animation: burger-close-top 400ms cubic-bezier(0.42, 0, 0.58, 1) forwards; }
-  /* line 94, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_burger-menu.scss */
+  /* line 93, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_burger-menu.scss */
   .closing .burger-menu-piece:nth-child(3) {
     animation: burger-close-bot 400ms cubic-bezier(0.42, 0, 0.58, 1) forwards; }
 
@@ -109,25 +110,70 @@ body {
   100% {
     transform: translate3d(0, 0, 0); } }
 
-/* line 3, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/header.scss */
+/* line 2, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_menu-layer.scss */
+.menu-layer .menu-layer-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  background-color: #000;
+  opacity: 0;
+  z-index: 2000;
+  transition: opacity 400ms cubic-bezier(0.42, 0, 0.58, 1); }
+
+/* line 14, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_menu-layer.scss */
+.menu-layer .menu-layer-content {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  padding-top: 66px;
+  background-color: #fff;
+  z-index: 2010;
+  transition: left 400ms cubic-bezier(0.42, 0, 0.58, 1); }
+
+/* line 27, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_menu-layer.scss */
+.menu-layer.is-open .menu-layer-bg {
+  width: 100%;
+  height: 100%;
+  opacity: 0.3; }
+
+/* line 33, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_menu-layer.scss */
+.menu-layer.is-open .menu-layer-content {
+  left: 0; }
+
+/* line 39, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_menu-layer.scss */
+.menu-layer.closing .menu-layer-bg {
+  width: 100%;
+  height: 100%; }
+
+@media (max-device-width: 1023px), (min-device-width: 1024px) {
+  /* line 48, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_menu-layer.scss */
+  .menu-layer .menu-layer-content {
+    left: -350px;
+    width: 350px; } }
+
+/* line 4, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/header.scss */
 #main-header {
   position: fixed;
   width: 100%;
   top: 0; }
-  /* line 7, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/header.scss */
+  /* line 8, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/header.scss */
   #main-header .top-header {
     height: 66px;
     background-color: #fff; }
-    /* line 11, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/header.scss */
+    /* line 12, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/header.scss */
     #main-header .top-header .logo {
       float: left;
       height: 45px;
       margin-top: 10.5px;
       margin-left: 90px; }
-      /* line 17, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/header.scss */
+      /* line 18, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/header.scss */
       #main-header .top-header .logo img {
         height: 100%; }
-  /* line 23, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/header.scss */
+  /* line 24, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/header.scss */
   #main-header .bottom-header {
     height: 30px;
     background-color: #f4f3f7;
@@ -136,5 +182,9 @@ body {
 /* line 7, stdin */
 #wrapper {
   margin-top: 96px; }
+
+/* line 11, stdin */
+.homeslider-container {
+  display: none; }
 
 /*# sourceMappingURL=theme.css.map*/
