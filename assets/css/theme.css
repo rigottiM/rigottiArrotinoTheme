@@ -185,14 +185,22 @@ body {
   /* line 36, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/header.scss */
   #main-header .top-header .logo {
     height: 45px;
-    margin-top: 10.5px; } }
+    margin-top: 10.5px; }
+  /* line 42, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/header.scss */
+  #main-header .bottom-header {
+    display: none; } }
 
 /* line 7, stdin */
 #wrapper {
-  margin-top: 96px; }
+  margin-top: 66px; }
 
 /* line 11, stdin */
 .homeslider-container {
   display: none; }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1023px), only screen and (min-device-width: 1024px) {
+  /* line 14, stdin */
+  #wrapper {
+    margin-top: 96px; } }
 
 /*# sourceMappingURL=theme.css.map*/

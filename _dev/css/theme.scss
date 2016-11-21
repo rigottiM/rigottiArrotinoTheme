@@ -5,7 +5,13 @@
 @import "components/header";
 
 #wrapper {
-	margin-top: $main-header-height;
+	margin-top: $main-header-height-mobile;
 }
 
 .homeslider-container {display: none;} //DA RIMUOVERE!!!!
+
+@media #{$tabletMediaQuery}, #{$desktopMediaQuery} {
+	#wrapper {
+		margin-top: $main-header-height-tabletDekstop;
+	}
+}

@@ -38,5 +38,9 @@
 				margin-top: ($top-header-height - $logo-height-tabletDesktop)/2;
 			}
 		}
+
+		.bottom-header {
+			display: none;
+		}
 	}
 }

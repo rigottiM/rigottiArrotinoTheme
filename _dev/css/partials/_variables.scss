@@ -11,7 +11,8 @@ $top-header-height: 66px;
 $top-header-color: $white;
 $bottom-header-height: 30px;
 $bottom-header-color: #f4f3f7;
-$main-header-height: $top-header-height + $bottom-header-height;
+$main-header-height-mobile: $top-header-height;
+$main-header-height-tabletDesktop: $top-header-height + $bottom-header-height;
 $logo-height-mobile: 35px;
 $logo-height-tabletDesktop: 45px;
 
