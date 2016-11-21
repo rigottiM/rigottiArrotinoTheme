@@ -10,7 +10,8 @@ plugins.push(
 module.exports = [{
   // JavaScript
   entry: [
-    './js/theme.js'
+    './js/theme.js',
+    './css/theme.scss'
   ],
   output: {
     path: '../assets/js',
@@ -24,27 +25,7 @@ module.exports = [{
       query: {
         presets: ['es2015']
       }
-    }]
-  },
-  externals: {
-    prestashop: 'prestashop'
-  },
-  devtool: 'source-map',
-  plugins: plugins,
-  resolve: {
-    extensions: ['', '.js']
-  }
-}, {
-  // CSS
-  entry: [
-    './css/theme.scss'
-  ],
-  output: {
-    path: '../assets/js',
-    filename: 'theme.js'
-  },
-  module: {
-    loaders: [{
+    },{
       test: /\.scss$/,
       loader: ExtractTextPlugin.extract(
         "style",
@@ -55,8 +36,12 @@ module.exports = [{
       loader: 'file-loader?name=../css/[hash].[ext]'
     }]
   },
+  externals: {
+    prestashop: 'prestashop'
+  },
+  devtool: 'source-map',
   plugins: plugins,
   resolve: {
-    extensions: ['', '.scss', '.styl', '.less', '.css']
+    extensions: ['', '.js', '.scss', '.styl', '.less', '.css']
   }
 }];
