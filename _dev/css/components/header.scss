@@ -6,6 +6,7 @@
 	width: 100%;
 	min-width: $site-min-width;
 	top: 0;
+	z-index: $header-z-index;
 
 	.top-header {
 		height: $top-header-height;
@@ -19,6 +20,57 @@
 
 			img {
 				height: 100%;
+			}
+		}
+
+		.show-text-search {
+			height: $top-header-buttons-size;
+			width: $top-header-buttons-size;
+			margin-top: ($top-header-height - $top-header-buttons-size)/2;
+			padding: 5px;
+			background-color: transparent;
+			background-image: url(../img/search.svg);
+			background-origin: content-box;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: auto auto;
+		}
+
+		.text-search {
+			position: fixed;
+			top: ($top-header-height - $text-search-height);
+			left: 0;
+			right: 0;
+			height: $text-search-height;
+			z-index: -1;
+			transition: top $menu-animation-duration $menu-animation-timing;
+
+			input[type="text"] {
+				float: left;
+				height: $text-search-height;
+				width: calc(100% - #{$text-search-button-width});
+				padding: 0 15px;
+				border: none;
+				background-color: #e1e0e4;
+			}
+
+			button {
+				height: $text-search-height;
+				width: $text-search-button-width;
+				padding: 5px;
+				border: none;
+				border-radius: 0;
+				background-image: url(../img/search.svg);
+				background-origin: content-box;
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: auto auto;
+				text-indent: -9999px; 
+    			line-height: 0;
+			}
+
+			&.show {
+				top: $top-header-height;
 			}
 		}
 	}
@@ -37,6 +89,34 @@
 			.logo {
 				height: $logo-height-tabletDesktop;
 				margin-top: ($top-header-height - $logo-height-tabletDesktop)/2;
+			}
+
+			.show-text-search {
+				display: none;
+			}
+
+			.text-search {
+				position: relative;
+				float: left;
+				top: initial;
+				left: initial;
+				right: initial;
+				margin-top: ($top-header-height - $text-search-height)/2;
+				margin-left: 30px;
+				transition: initial;
+				z-index: initial;
+
+				input[type="text"] {
+					border-radius: 4px 0 0 4px;
+				}
+
+				button {
+					border-radius: 0 4px 4px 0;
+				}
+
+				&.show {
+					top: initial;
+				}
 			}
 		}
 

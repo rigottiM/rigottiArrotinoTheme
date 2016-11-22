@@ -4,17 +4,27 @@ $site-min-width: 320px;
 // COLORS
 $white: #fff;
 $black: #000;
-$blue: #001f66;
+$light-blue: #50adeb;
+$light-blue-2: #4aa0d9;
+$blue: rgb(35, 47, 62);
+
+//FROMS
+$buttons-bg-color: $light-blue;
+$buttons-hover-bg-color: $light-blue-2;
+$buttons-color: $blue;
 
 //HEADER
 $top-header-height: 66px;
 $top-header-color: $white;
+$top-header-buttons-size: 40px;
 $bottom-header-height: 30px;
 $bottom-header-color: #f4f3f7;
 $main-header-height-mobile: $top-header-height;
 $main-header-height-tabletDesktop: $top-header-height + $bottom-header-height;
 $logo-height-mobile: 35px;
 $logo-height-tabletDesktop: 45px;
+$text-search-height: 36px;
+$text-search-button-width: 40px;
 
 //MENU-LAYER
 $menu-layer-width-mobile: 250px;

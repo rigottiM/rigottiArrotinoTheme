@@ -62,6 +62,10 @@
 	
 	var _burgerMenu2 = _interopRequireDefault(_burgerMenu);
 	
+	var _showTextSearchButton = __webpack_require__(13);
+	
+	var _showTextSearchButton2 = _interopRequireDefault(_showTextSearchButton);
+	
 	var _prestashop = __webpack_require__(6);
 	
 	var _prestashop2 = _interopRequireDefault(_prestashop);
@@ -73,10 +77,11 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	(0, _expose$ExposeJQueryJquery2.default)(document).ready(function () {
-		var $burgerMenuEl = (0, _expose$ExposeJQueryJquery2.default)('.burger-click-region'),
-		    $burgerMenuTarget = (0, _expose$ExposeJQueryJquery2.default)('.menu-layer'),
-		    burgerMenu = new _burgerMenu2.default($burgerMenuEl, $burgerMenuTarget);
+		var burgerMenu = new _burgerMenu2.default((0, _expose$ExposeJQueryJquery2.default)('.burger-click-region'), (0, _expose$ExposeJQueryJquery2.default)('.menu-layer')),
+		    showTextSearchButton = new _showTextSearchButton2.default((0, _expose$ExposeJQueryJquery2.default)('.show-text-search'), (0, _expose$ExposeJQueryJquery2.default)('.text-search'));
+	
 		burgerMenu.init();
+		showTextSearchButton.init();
 	});
 
 /***/ },
@@ -10297,6 +10302,56 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 9 */,
+/* 10 */,
+/* 11 */,
+/* 12 */,
+/* 13 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _jquery = __webpack_require__(4);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	var ShowTextSearchButton = function () {
+		function ShowTextSearchButton(el, target) {
+			_classCallCheck(this, ShowTextSearchButton);
+	
+			this.el = el;
+			this.target = target;
+		}
+	
+		_createClass(ShowTextSearchButton, [{
+			key: 'init',
+			value: function init() {
+				var clickDelay = 500,
+				    clickDelayTimer = null,
+				    $target = this.target;
+	
+				this.el.on('click', function () {
+					$target.toggleClass('show');
+				});
+			}
+		}]);
+	
+		return ShowTextSearchButton;
+	}();
+	
+	exports.default = ShowTextSearchButton;
 
 /***/ }
 /******/ ]);
