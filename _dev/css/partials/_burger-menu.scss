@@ -15,6 +15,7 @@ $menu-txt-active-font-size: 20px;
 	top: ($top-header-height - $menu-button-height)/2;
 	left: 25px;
 	z-index: $burger-menu-z-index;
+	color: $blue;
 }
 
 .burger-click-region {
@@ -50,7 +51,7 @@ $menu-txt-active-font-size: 20px;
 	left: 0;
 	right: 0;
 	margin: 0 auto;
-	background-color: black;
+	background-color: $blue;
 	border-radius: $menu-piece-border-radius;
 	transform-origin: 50% 50%;
 	transition: transform $menu-animation-duration $menu-animation-timing;
