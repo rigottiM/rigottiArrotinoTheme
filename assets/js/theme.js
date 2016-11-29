@@ -45,7 +45,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1);
-	module.exports = __webpack_require__(8);
+	module.exports = __webpack_require__(9);
 
 
 /***/ },
@@ -62,15 +62,15 @@
 	
 	var _burgerMenu2 = _interopRequireDefault(_burgerMenu);
 	
-	var _showTextSearchButton = __webpack_require__(13);
+	var _showTextSearchButton = __webpack_require__(6);
 	
 	var _showTextSearchButton2 = _interopRequireDefault(_showTextSearchButton);
 	
-	var _prestashop = __webpack_require__(6);
+	var _prestashop = __webpack_require__(7);
 	
 	var _prestashop2 = _interopRequireDefault(_prestashop);
 	
-	var _events = __webpack_require__(7);
+	var _events = __webpack_require__(8);
 	
 	var _events2 = _interopRequireDefault(_events);
 	
@@ -9985,12 +9985,58 @@
 
 /***/ },
 /* 6 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _jquery = __webpack_require__(4);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	var ShowTextSearchButton = function () {
+		function ShowTextSearchButton(el, target) {
+			_classCallCheck(this, ShowTextSearchButton);
+	
+			this.el = el;
+			this.target = target;
+		}
+	
+		_createClass(ShowTextSearchButton, [{
+			key: 'init',
+			value: function init() {
+				var clickDelay = 500,
+				    clickDelayTimer = null,
+				    $target = this.target;
+	
+				this.el.on('click', function () {
+					$target.toggleClass('show');
+				});
+			}
+		}]);
+	
+		return ShowTextSearchButton;
+	}();
+	
+	exports.default = ShowTextSearchButton;
+
+/***/ },
+/* 7 */
 /***/ function(module, exports) {
 
 	module.exports = prestashop;
 
 /***/ },
-/* 7 */
+/* 8 */
 /***/ function(module, exports) {
 
 	// Copyright Joyent, Inc. and other Node contributors.
@@ -10298,60 +10344,10 @@
 
 
 /***/ },
-/* 8 */
+/* 9 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */,
-/* 13 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _jquery = __webpack_require__(4);
-	
-	var _jquery2 = _interopRequireDefault(_jquery);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	var ShowTextSearchButton = function () {
-		function ShowTextSearchButton(el, target) {
-			_classCallCheck(this, ShowTextSearchButton);
-	
-			this.el = el;
-			this.target = target;
-		}
-	
-		_createClass(ShowTextSearchButton, [{
-			key: 'init',
-			value: function init() {
-				var clickDelay = 500,
-				    clickDelayTimer = null,
-				    $target = this.target;
-	
-				this.el.on('click', function () {
-					$target.toggleClass('show');
-				});
-			}
-		}]);
-	
-		return ShowTextSearchButton;
-	}();
-	
-	exports.default = ShowTextSearchButton;
 
 /***/ }
 /******/ ]);
