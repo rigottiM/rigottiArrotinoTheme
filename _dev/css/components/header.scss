@@ -1,5 +1,6 @@
 @import "partials/_burger-menu";
 @import "partials/_menu-layer";
+@import "partials/_mini-cart";
 
 #main-header {
 	position: fixed;
@@ -72,6 +73,13 @@
 			&.show {
 				top: $top-header-height;
 			}
+		}
+
+		.header-nav {
+			float: right;
+			height: $top-header-buttons-size;
+			margin-top: ($top-header-height - $top-header-buttons-size)/2;
+			margin-right: ($top-header-height - $top-header-buttons-size)/2;
 		}
 	}
 

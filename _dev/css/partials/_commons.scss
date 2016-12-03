@@ -13,6 +13,14 @@ body {
 	box-sizing: inherit;
 }
 
+a {
+	color: $links-color;
+
+	&:hover {
+		color: $links-color-hover;;
+	}
+}
+
 button {
 	background-color: $buttons-bg-color;
 	color: $buttons-color;
