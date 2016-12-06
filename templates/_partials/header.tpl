@@ -17,13 +17,13 @@
 		<a class="logo" href="{$urls.base_url}" title="{$shop.name}">
 			<img src="{$shop.logo}" alt="{$shop.name}">
 		</a>
-		<button class="show-text-search"></button>
 		<div class="text-search">
 			{hook h='displaySearch'}
 		</div>
 		<div class="header-nav">
 			{hook h='displayNav'}
 		</div>
+		<button class="show-text-search"></button>
 	</div>
 {/block}
 

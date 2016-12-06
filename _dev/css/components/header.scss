@@ -1,5 +1,6 @@
 @import "partials/_burger-menu";
 @import "partials/_menu-layer";
+@import "partials/_user-info";
 @import "partials/_mini-cart";
 
 #main-header {
@@ -12,12 +13,31 @@
 	.top-header {
 		height: $top-header-height;
 		background-color: $top-header-color;
+		padding: 0 $main-header-horizontal-padding-mobile;
+
+		.show-text-search,
+		.user-info,
+		.cart-preview {
+			margin: 0 5px;
+		}
+
+		.burger-menu {
+			position: fixed;
+			width: $menu-button-width;
+			height: $menu-button-height;
+			text-transform: uppercase;
+			top: ($top-header-height - $menu-button-height)/2;
+			left: $main-header-horizontal-padding-mobile;
+			z-index: $burger-menu-z-index;
+			color: $blue;
+		}
 
 		.logo {
 			float: left;
 			height: $logo-height-mobile;
+			width: $logo-width-mobile;
 			margin-top: ($top-header-height - $logo-height-mobile)/2;
-			margin-left: 90px;
+			margin-left: $main-header-horizontal-padding-mobile + $menu-button-width;
 
 			img {
 				height: 100%;
@@ -25,6 +45,7 @@
 		}
 
 		.show-text-search {
+			float: right;
 			height: $top-header-buttons-size;
 			width: $top-header-buttons-size;
 			margin-top: ($top-header-height - $top-header-buttons-size)/2;
@@ -52,7 +73,10 @@
 				width: calc(100% - #{$text-search-button-width});
 				padding: 0 15px;
 				border: none;
+				border-radius: 0px;
 				background-color: #e1e0e4;
+				font-size: 16px;
+				font-weight: 100;
 			}
 
 			button {
@@ -79,7 +103,10 @@
 			float: right;
 			height: $top-header-buttons-size;
 			margin-top: ($top-header-height - $top-header-buttons-size)/2;
-			margin-right: ($top-header-height - $top-header-buttons-size)/2;
+
+			.language-selector {
+				display: none;
+			}
 		}
 	}
 
@@ -88,15 +115,24 @@
 		height: $bottom-header-height;
 		background-color: $bottom-header-color;
 		opacity: 0.9;
+		padding: 0 $main-header-horizontal-padding-mobile;
 	}
 }
 
 @media #{$tabletMediaQuery}, #{$desktopMediaQuery} {
 	#main-header {
 		.top-header {
+			padding: 0 $main-header-horizontal-padding-tabletDesktop;
+
+			.burger-menu {
+				left: $main-header-horizontal-padding-tabletDesktop;
+			}
+
 			.logo {
 				height: $logo-height-tabletDesktop;
+				width: $logo-width-tabletDesktop;
 				margin-top: ($top-header-height - $logo-height-tabletDesktop)/2;
+				margin-left: $main-header-horizontal-padding-tabletDesktop + $menu-button-width;;
 			}
 
 			.show-text-search {
@@ -109,8 +145,8 @@
 				top: initial;
 				left: initial;
 				right: initial;
+				margin: 0 30px;
 				margin-top: ($top-header-height - $text-search-height)/2;
-				margin-left: 30px;
 				transition: initial;
 				z-index: initial;
 
@@ -130,6 +166,7 @@
 
 		.bottom-header {
 			display: block;
+			padding: 0 $main-header-horizontal-padding-tabletDesktop;
 		}
 	}
 }

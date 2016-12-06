@@ -51,6 +51,9 @@
       {block name='display_customer_account'}
         {hook h='displayCustomerAccount'}
       {/block}
+      <li>
+        <a class="logout"  href="{$logout_url}" rel="nofollow" title="{l s='Log me out' d='Shop.Theme.CustomerAccount'}">{l s='Sign out' d='Shop.Theme.Actions'}</a>
+      </li>
 
     </ul>
 

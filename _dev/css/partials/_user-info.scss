@@ -1,0 +1,40 @@
+.user-info {
+	position: relative;
+	float: left;
+
+	.login,
+	.account {
+		display: block;
+		height: $top-header-buttons-size;
+		width: $top-header-buttons-size;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: $top-header-buttons-size - 5px * 2;
+		text-indent: -9999px;
+		white-space: nowrap;
+	}
+
+	.login {
+		background-image: url(../img/user-unlogged.svg);
+	}
+
+	.account {
+		background-image: url(../img/user-logged.svg);
+	}
+}
+
+@media #{$tabletMediaQuery}, #{$desktopMediaQuery} {
+	.user-info {
+		.login,
+		.account {
+			width: auto;
+			max-width: 170px;
+			text-indent: initial;
+			line-height: $top-header-buttons-size;
+			background-position: 5px center;
+			padding-left: $top-header-buttons-size;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+}

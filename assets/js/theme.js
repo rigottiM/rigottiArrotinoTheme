@@ -10020,6 +10020,11 @@
 	
 				this.el.on('click', function () {
 					$target.toggleClass('show');
+					if ($target.hasClass('show')) {
+						$target.find('input[type=text]').focus();
+					} else {
+						$target.find('input[type=text]').blur();
+					}
 				});
 			}
 		}]);

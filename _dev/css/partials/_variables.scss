@@ -16,6 +16,8 @@ $buttons-hover-bg-color: $light-blue-2;
 $buttons-color: $blue;
 
 //HEADER
+$main-header-horizontal-padding-mobile: 5px;
+$main-header-horizontal-padding-tabletDesktop: 25px;
 $top-header-height: 66px;
 $top-header-color: $white;
 $top-header-buttons-size: 40px;
@@ -24,9 +26,21 @@ $bottom-header-color: #f4f3f7;
 $main-header-height-mobile: $top-header-height;
 $main-header-height-tabletDesktop: $top-header-height + $bottom-header-height;
 $logo-height-mobile: 35px;
+$logo-width-mobile: 115px;
 $logo-height-tabletDesktop: 45px;
+$logo-width-tabletDesktop: 150px;
 $text-search-height: 36px;
 $text-search-button-width: 40px;
+
+//MENU_BUTTON
+$menu-button-height: $top-header-buttons-size;
+$menu-button-width: $top-header-buttons-size;
+$menu-piece-width: 30px;
+$menu-piece-height: 3px;
+$menu-piece-space-between: 4px;
+$menu-piece-border-radius: 2px;
+$menu-txt-initial-font-size: 12px;
+$menu-txt-active-font-size: 20px;
 
 //MENU-LAYER
 $menu-layer-width-mobile: 250px;
