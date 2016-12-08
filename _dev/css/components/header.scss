@@ -135,6 +135,8 @@
 @media #{$tabletMediaQuery}, #{$desktopMediaQuery} {
 	#main-header {
 		.top-header {
+			display: flex;
+			justify-content: space-between;
 			padding: 0 $main-header-horizontal-padding-tabletDesktop;
 
 			.burger-menu {
@@ -153,6 +155,7 @@
 			}
 
 			.text-search {
+				width: 32%;
 				position: relative;
 				float: left;
 				top: initial;
