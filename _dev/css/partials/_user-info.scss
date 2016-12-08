@@ -15,11 +15,21 @@
 	}
 
 	.login {
-		background-image: url(../img/user-unlogged.svg);
+		background-image: url(../img/user-unlogged-white.svg);
 	}
 
 	.account {
-		background-image: url(../img/user-logged.svg);
+		background-image: url(../img/user-logged-white.svg);
+	}
+
+	&:hover {
+		.login {
+			background-image: url(../img/user-unlogged-light-blue.svg);
+		}
+
+		.account {
+			background-image: url(../img/user-logged-light-blue.svg);
+		}
 	}
 }
 

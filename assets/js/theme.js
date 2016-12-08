@@ -10020,6 +10020,7 @@
 	
 				this.el.on('click', function () {
 					$target.toggleClass('show');
+					(0, _jquery2.default)(this).toggleClass('show');
 					if ($target.hasClass('show')) {
 						$target.find('input[type=text]').focus();
 					} else {

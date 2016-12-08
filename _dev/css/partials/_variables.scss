@@ -4,6 +4,7 @@ $site-min-width: 320px;
 // COLORS
 $white: #fff;
 $black: #000;
+$light-grey : rgb(248, 248, 248);
 $light-blue: #50adeb;
 $light-blue-2: #4aa0d9;
 $blue: rgb(35, 47, 61);
@@ -19,7 +20,7 @@ $buttons-color: $blue;
 $main-header-horizontal-padding-mobile: 5px;
 $main-header-horizontal-padding-tabletDesktop: 25px;
 $top-header-height: 66px;
-$top-header-color: $white;
+$top-header-color: $blue;
 $top-header-buttons-size: 40px;
 $bottom-header-height: 30px;
 $bottom-header-color: #f4f3f7;
@@ -38,7 +39,7 @@ $menu-button-width: $top-header-buttons-size;
 $menu-piece-width: 30px;
 $menu-piece-height: 3px;
 $menu-piece-space-between: 4px;
-$menu-piece-border-radius: 2px;
+$menu-piece-border-radius: 1px;
 $menu-txt-initial-font-size: 12px;
 $menu-txt-active-font-size: 20px;
 

@@ -12,6 +12,7 @@ export default class ShowTextSearchButton {
 
 		this.el.on('click', function () {
 			$target.toggleClass('show');
+			$(this).toggleClass('show');
 			if($target.hasClass('show')){
 				$target.find('input[type=text]').focus();
 			}

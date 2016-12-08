@@ -18,6 +18,7 @@
 	transition: all $menu-animation-duration $menu-animation-timing;
 	
 	.is-open & {
+		color: $blue;
 		font-size: $menu-txt-active-font-size;
 		transform: translate3d($menu-button-width, -18.5px, 0);
 	}
@@ -31,10 +32,10 @@
 	left: 0;
 	right: 0;
 	margin: 0 auto;
-	background-color: $blue;
+	background-color: $white;
 	border-radius: $menu-piece-border-radius;
 	transform-origin: 50% 50%;
-	transition: transform $menu-animation-duration $menu-animation-timing;
+	transition: all $menu-animation-duration $menu-animation-timing;
 	
 	&:nth-child(1) {
 		top: ($menu-button-height - $menu-piece-height * 3 - $menu-piece-space-between * 2) / 2;
@@ -51,19 +52,20 @@
 	}
 	
 	.active & {
+		background-color: $blue;
 		
-			&:nth-child(1) {
-				animation: burger-open-top $menu-animation-duration $menu-animation-timing forwards;
-			}
-		
-			&:nth-child(2) {
-				opacity: 0;
-				transition: transform $menu-animation-duration $menu-animation-timing, opacity 0ms linear $menu-animation-duration / 2;
-			}
-		
-			&:nth-child(3) {
-				animation: burger-open-bot $menu-animation-duration $menu-animation-timing forwards;
-			}
+		&:nth-child(1) {
+			animation: burger-open-top $menu-animation-duration $menu-animation-timing forwards;
+		}
+	
+		&:nth-child(2) {
+			opacity: 0;
+			transition: transform $menu-animation-duration $menu-animation-timing, opacity 0ms linear $menu-animation-duration / 2;
+		}
+	
+		&:nth-child(3) {
+			animation: burger-open-bot $menu-animation-duration $menu-animation-timing forwards;
+		}
 	}
 	
 	.closing & {
