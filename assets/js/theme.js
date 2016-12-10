@@ -66,6 +66,10 @@
 	
 	var _showTextSearchButton2 = _interopRequireDefault(_showTextSearchButton);
 	
+	var _menuLayer = __webpack_require__(22);
+	
+	var _menuLayer2 = _interopRequireDefault(_menuLayer);
+	
 	var _prestashop = __webpack_require__(7);
 	
 	var _prestashop2 = _interopRequireDefault(_prestashop);
@@ -78,10 +82,12 @@
 	
 	(0, _expose$ExposeJQueryJquery2.default)(document).ready(function () {
 		var burgerMenu = new _burgerMenu2.default((0, _expose$ExposeJQueryJquery2.default)('.burger-click-region'), (0, _expose$ExposeJQueryJquery2.default)('.menu-layer')),
-		    showTextSearchButton = new _showTextSearchButton2.default((0, _expose$ExposeJQueryJquery2.default)('.show-text-search'), (0, _expose$ExposeJQueryJquery2.default)('.text-search'));
+		    showTextSearchButton = new _showTextSearchButton2.default((0, _expose$ExposeJQueryJquery2.default)('.show-text-search'), (0, _expose$ExposeJQueryJquery2.default)('.text-search')),
+		    menuLayerManager = new _menuLayer2.default();
 	
 		burgerMenu.init();
 		showTextSearchButton.init();
+		menuLayerManager.init();
 	});
 
 /***/ },
@@ -9951,13 +9957,13 @@
 			value: function init() {
 				var clickDelay = 500,
 				    clickDelayTimer = null,
-				    $target = this.target;
+				    $target = this.target,
+				    $burger = this.el;
 	
-				this.el.on('click', function () {
+				$burger.on('click', function () {
 	
 					if (clickDelayTimer === null) {
 	
-						var $burger = (0, _jquery2.default)(this);
 						$burger.toggleClass('active');
 						$burger.parent().toggleClass('is-open');
 						$target.toggleClass('is-open');
@@ -9974,6 +9980,10 @@
 							clickDelayTimer = null;
 						}, clickDelay);
 					}
+				});
+	
+				$target.find(".menu-layer-bg").on('click', function () {
+					$burger.trigger("click");
 				});
 			}
 		}]);
@@ -10354,6 +10364,74 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 10 */,
+/* 11 */,
+/* 12 */,
+/* 13 */,
+/* 14 */,
+/* 15 */,
+/* 16 */,
+/* 17 */,
+/* 18 */,
+/* 19 */,
+/* 20 */,
+/* 21 */,
+/* 22 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _jquery = __webpack_require__(4);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	var menuLayerManager = function () {
+		function menuLayerManager() {
+			_classCallCheck(this, menuLayerManager);
+		}
+	
+		_createClass(menuLayerManager, [{
+			key: "init",
+			value: function init() {
+				var $menuLayer = (0, _jquery2.default)(".menu-layer"),
+				    categorySelector = ".category",
+				    panelSelector = ".panel";
+	
+				/*$menuLayer.find(categorySelector).mouseenter(function() {
+	   	console.log("enter");
+	   	$(this).children(panelSelector).addClass("open");
+	   });
+	   $menuLayer.find(categorySelector).mouseleave(function() {
+	   	console.log("leave");
+	   	$(this).find(panelSelector).removeClass("open");
+	   });*/
+	
+				$menuLayer.find(categorySelector).hover(function () {
+					console.log("open");
+					(0, _jquery2.default)(this).children(panelSelector).addClass("open");
+				}, function () {
+					console.log("close");
+					(0, _jquery2.default)(this).find(panelSelector).removeClass("open");
+				});
+			}
+		}]);
+	
+		return menuLayerManager;
+	}();
+	
+	exports.default = menuLayerManager;
 
 /***/ }
 /******/ ]);

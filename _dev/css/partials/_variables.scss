@@ -4,12 +4,16 @@ $site-min-width: 320px;
 // COLORS
 $white: #fff;
 $black: #000;
-$light-grey : rgb(248, 248, 248);
+$grey1: rgb(241, 241, 242);
+$grey2: rgb(235, 235, 237);
+$grey4: #e1dfe4;
+$grey-blue: #9b96a5;
 $light-blue: #50adeb;
 $light-blue-2: #4aa0d9;
 $blue: rgb(35, 47, 61);
 $links-color: #0066c0;
 $links-color-hover: #c45500;
+$bottom-header-color: #f4f3f7;
 
 //FROMS
 $buttons-bg-color: $light-blue;
@@ -23,7 +27,6 @@ $top-header-height: 66px;
 $top-header-color: $blue;
 $top-header-buttons-size: 40px;
 $bottom-header-height: 30px;
-$bottom-header-color: #f4f3f7;
 $main-header-height-mobile: $top-header-height;
 $main-header-height-tabletDesktop: $top-header-height + $bottom-header-height;
 $logo-height-mobile: 35px;
@@ -32,6 +35,10 @@ $logo-height-tabletDesktop: 45px;
 $logo-width-tabletDesktop: 150px;
 $text-search-height: 36px;
 $text-search-button-width: 40px;
+$menu-bg-color: $white;
+$menu-panel1-bg-color: $grey1;
+$menu-panel2-bg-color: $grey2;
+
 
 //MENU_BUTTON
 $menu-button-height: $top-header-buttons-size;

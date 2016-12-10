@@ -28,10 +28,17 @@ button {
   border-radius: 4px;
   line-height: 2.5em;
   padding: 0 3em;
-  text-decoration: none; }
-  /* line 33, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
+  text-decoration: none;
+  cursor: pointer; }
+  /* line 34, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
   button:hover {
     background-color: #4aa0d9; }
+
+/* line 39, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
 
 /* line 1, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_burger-menu.scss */
 .burger-click-region {
@@ -130,50 +137,135 @@ button {
   100% {
     transform: translate3d(0, 0, 0); } }
 
-/* line 2, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_menu-layer.scss */
-.menu-layer .menu-layer-bg {
+/* line 1, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_menu-layer.scss */
+.menu-layer {
+  z-index: 2010;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  background-color: #000;
-  opacity: 0;
-  z-index: 2000;
-  transition: opacity 400ms cubic-bezier(0.42, 0, 0.58, 1); }
-
-/* line 14, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_menu-layer.scss */
-.menu-layer .menu-layer-content {
-  position: fixed;
+  height: 100%;
   top: 0;
   left: -250px;
-  width: 250px;
-  height: 100%;
-  padding-top: 66px;
-  background-color: #fff;
-  z-index: 2010;
   transition: left 400ms cubic-bezier(0.42, 0, 0.58, 1); }
-
-/* line 27, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_menu-layer.scss */
-.menu-layer.is-open .menu-layer-bg {
-  width: 100%;
-  height: 100%;
-  opacity: 0.3; }
-
-/* line 33, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_menu-layer.scss */
-.menu-layer.is-open .menu-layer-content {
-  left: 0; }
-
-/* line 39, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_menu-layer.scss */
-.menu-layer.closing .menu-layer-bg {
-  width: 100%;
-  height: 100%; }
+  /* line 9, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_menu-layer.scss */
+  .menu-layer .menu-layer-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background-color: #000;
+    opacity: 0;
+    z-index: -10;
+    transition: opacity 400ms cubic-bezier(0.42, 0, 0.58, 1); }
+  /* line 21, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_menu-layer.scss */
+  .menu-layer .menu-layer-content {
+    position: relative;
+    width: 250px;
+    height: 100%;
+    padding-top: 66px;
+    background-color: #fff; }
+  /* line 29, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_menu-layer.scss */
+  .menu-layer.is-open {
+    left: 0; }
+    /* line 32, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_menu-layer.scss */
+    .menu-layer.is-open .menu-layer-bg {
+      width: 100%;
+      height: 100%;
+      opacity: 0.3; }
+  /* line 40, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_menu-layer.scss */
+  .menu-layer.closing .menu-layer-bg {
+    width: 100%;
+    height: 100%; }
+  /* line 46, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_menu-layer.scss */
+  .menu-layer .panel {
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    width: 250px;
+    height: 100%;
+    top: 0;
+    transition: all 400ms cubic-bezier(0.42, 0, 0.58, 1);
+    z-index: -1; }
+    /* line 56, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_menu-layer.scss */
+    .menu-layer .panel .panel-title {
+      height: 66px;
+      margin-left: 20px;
+      line-height: 66px;
+      font-size: 18px; }
+    /* line 63, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_menu-layer.scss */
+    .menu-layer .panel.open {
+      visibility: visible;
+      opacity: 1; }
+  /* line 69, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_menu-layer.scss */
+  .menu-layer ul {
+    font-size: 16px;
+    color: #232f3d; }
+    /* line 73, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_menu-layer.scss */
+    .menu-layer ul li {
+      margin-left: 15px; }
+      /* line 76, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_menu-layer.scss */
+      .menu-layer ul li a {
+        display: block;
+        line-height: 20px;
+        padding: 5px 0;
+        padding-left: 5px;
+        padding-right: 40px;
+        text-decoration: none;
+        color: #232f3d; }
+        /* line 85, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_menu-layer.scss */
+        .menu-layer ul li a:hover {
+          color: #4aa0d9; }
+      /* line 90, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_menu-layer.scss */
+      .menu-layer ul li.has-children {
+        background-position: right 20px center;
+        background-repeat: no-repeat;
+        background-size: auto 15px;
+        background-image: url(../css/1c1a031f083b6f5b34c1021cae6a01f3.svg); }
+        /* line 96, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_menu-layer.scss */
+        .menu-layer ul li.has-children:hover {
+          background-image: url(../css/27d40eed74808264b4164f36bc02e2e4.svg); }
+  /* line 105, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_menu-layer.scss */
+  .menu-layer ul[data-depth="0"] > .category.has-children:hover {
+    background-color: #f1f1f2; }
+  /* line 109, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_menu-layer.scss */
+  .menu-layer ul[data-depth="0"] > .category > .panel {
+    left: 0;
+    background-color: #f1f1f2; }
+    /* line 113, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_menu-layer.scss */
+    .menu-layer ul[data-depth="0"] > .category > .panel.open {
+      left: 250px; }
+  /* line 122, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_menu-layer.scss */
+  .menu-layer ul[data-depth="1"] > .category.has-children:hover {
+    background-color: #ebebed; }
+  /* line 126, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_menu-layer.scss */
+  .menu-layer ul[data-depth="1"] > .category > .panel {
+    left: 250px;
+    background-color: #ebebed; }
+    /* line 130, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_menu-layer.scss */
+    .menu-layer ul[data-depth="1"] > .category > .panel.open {
+      left: 500px; }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1023px), only screen and (min-device-width: 1024px) {
-  /* line 48, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_menu-layer.scss */
-  .menu-layer .menu-layer-content {
-    left: -350px;
-    width: 350px; } }
+  /* line 139, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_menu-layer.scss */
+  .menu-layer {
+    left: -350px; }
+    /* line 142, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_menu-layer.scss */
+    .menu-layer .menu-layer-content {
+      width: 350px; }
+    /* line 146, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_menu-layer.scss */
+    .menu-layer .panel {
+      width: 350px; }
+      /* line 149, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_menu-layer.scss */
+      .menu-layer .panel.open {
+        left: 350px; }
+    /* line 155, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_menu-layer.scss */
+    .menu-layer ul[data-depth="0"] > .category > .panel.open {
+      left: 350px; }
+    /* line 160, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_menu-layer.scss */
+    .menu-layer ul[data-depth="1"] > .category > .panel {
+      left: 350px; }
+      /* line 162, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_menu-layer.scss */
+      .menu-layer ul[data-depth="1"] > .category > .panel.open {
+        left: 700px; } }
 
 /* line 1, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_user-info.scss */
 .user-info {

@@ -1,4 +1,11 @@
 .menu-layer {
+	z-index: $menu-layer-content-z-index;
+	position: fixed;
+	height: 100%;
+	top: 0;
+	left: -$menu-layer-width-mobile;
+	transition: left $menu-animation-duration $menu-animation-timing;
+	
 	.menu-layer-bg {
 		position: fixed;
 		top: 0;
@@ -7,31 +14,25 @@
 		height: 0;
 		background-color: $black;
 		opacity: 0;
-		z-index: $menu-layer-bg-z-index;
+		z-index: -10;
 		transition: opacity $menu-animation-duration $menu-animation-timing;
 	}
 
 	.menu-layer-content {
-		position: fixed;
-		top: 0;
-		left: - $menu-layer-width-mobile;
+		position: relative;
 		width: $menu-layer-width-mobile;
 		height: 100%;
 		padding-top: $top-header-height;
 		background-color: $white;
-		z-index: $menu-layer-content-z-index;
-		transition: left $menu-animation-duration $menu-animation-timing;
 	}
 
 	&.is-open {
+		left: 0;
+
 		.menu-layer-bg {
 			width: 100%;
 			height: 100%;
 			opacity: 0.3;
-		}
-
-		.menu-layer-content {
-			left: 0;
 		}
 	}
 
@@ -41,13 +42,126 @@
 			height: 100%;
 		}
 	}
+
+	.panel {
+		position: fixed;
+		opacity: 0;
+		visibility: hidden;
+		width: $menu-layer-width-mobile;
+		height: 100%;
+		top: 0;
+		transition: all $menu-animation-duration $menu-animation-timing;
+		z-index: -1;
+
+		.panel-title {
+			height: 66px;
+			margin-left: 20px;
+			line-height: 66px;
+			font-size: 18px;
+		}
+
+		&.open {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+
+	ul {
+		font-size: 16px;
+		color: $blue;
+
+		li {
+			margin-left: 15px;
+
+			a {
+				display: block;
+				line-height: 20px;
+				padding: 5px 0;
+				padding-left: 5px;
+				padding-right: 40px;
+				text-decoration: none;
+				color: $blue;
+
+				&:hover {
+					color: $light-blue-2;
+				}
+			}
+
+			&.has-children {
+				background-position: right 20px center;
+				background-repeat: no-repeat;
+				background-size: auto 15px;
+				background-image: url(../img/arrow-right-grey-blue.svg);
+				
+				&:hover {
+					background-image: url(../img/arrow-right-light-blue-2.svg);
+				}
+			}
+		}
+	}
+
+	ul[data-depth="0"] {
+		&>.category {
+			&.has-children:hover {
+				background-color: $menu-panel1-bg-color;
+			}
+
+			&>.panel {
+				left: 0;
+				background-color: $menu-panel1-bg-color;
+
+				&.open {
+					left: $menu-layer-width-mobile;
+				}
+			}
+		}
+	}
+
+	ul[data-depth="1"] {
+		&>.category {
+			&.has-children:hover {
+				background-color: $menu-panel2-bg-color;
+			}
+
+			&>.panel {
+				left: $menu-layer-width-mobile;
+				background-color: $menu-panel2-bg-color;
+
+				&.open {
+					left: $menu-layer-width-mobile * 2;
+				}
+			}
+		}
+	}
 }
 
 @media #{$tabletMediaQuery}, #{$desktopMediaQuery} {
 	.menu-layer {
+		left: -$menu-layer-width-tabletDesktop;
+		
 		.menu-layer-content {
-			left: -$menu-layer-width-tabletDesktop;
 			width: $menu-layer-width-tabletDesktop;
+		}
+
+		.panel {
+			width: $menu-layer-width-tabletDesktop;
+
+			&.open {
+				left: $menu-layer-width-tabletDesktop;
+			}
+		}
+
+		ul[data-depth="0"]>.category>.panel {
+			&.open {
+				left: $menu-layer-width-tabletDesktop;
+			}
+		}
+
+		ul[data-depth="1"]>.category>.panel {
+			left: $menu-layer-width-tabletDesktop;
+			&.open {
+				left: $menu-layer-width-tabletDesktop * 2;
+			}
 		}
 	}
 }

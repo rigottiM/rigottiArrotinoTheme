@@ -8,13 +8,13 @@ export default class BurgerMenu {
 	init() {
 		var clickDelay = 500,
 			clickDelayTimer = null,
-			$target = this.target;
+			$target = this.target,
+			$burger = this.el;
 
-		this.el.on('click', function () {
+		$burger.on('click', function () {
 			
 			if(clickDelayTimer === null) {
 			
-				var $burger = $(this);
 				$burger.toggleClass('active');
 				$burger.parent().toggleClass('is-open');
 				$target.toggleClass('is-open');
@@ -31,6 +31,10 @@ export default class BurgerMenu {
 					clickDelayTimer = null;
 				}, clickDelay);
 			}
+		});
+
+		$target.find(".menu-layer-bg").on('click', function () {
+			$burger.trigger("click");
 		});
 	}
 }
