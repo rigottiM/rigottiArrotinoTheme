@@ -3,9 +3,11 @@
 @import "partials/_fonts";
 @import "partials/_commons";
 @import "components/header";
+@import "components/customer";
 
 #wrapper {
 	margin-top: $main-header-height-mobile;
+	padding: $padding-wrapper-mobile;
 }
 
 .homeslider-container {display: none;} //DA RIMUOVERE!!!!
@@ -13,5 +15,6 @@
 @media #{$tabletMediaQuery}, #{$desktopMediaQuery} {
 	#wrapper {
 		margin-top: $main-header-height-tabletDesktop;
+		padding: $padding-wrapper-tabletDesktop;
 	}
 }

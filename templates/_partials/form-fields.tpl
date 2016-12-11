@@ -1,6 +1,6 @@
 {if $field.type === 'select'}
 
-  <label class='select-field {if $field.required}required{/if}'>
+  <label class='select-field {if $field.required}required{/if} {if $field.errors|count}error{/if}'>
     <span>{$field.label}</span>
     <select name="{$field.name}" {if $field.required}required{/if}>
       <option value disabled selected>{l s='-- please choose --' d='Shop.Forms.Labels'}</option>
@@ -12,7 +12,7 @@
 
 {elseif $field.type === 'countrySelect'}
 
-  <label class='select-field {if $field.required}required{/if}'>
+  <label class='select-field {if $field.required}required{/if} {if $field.errors|count}error{/if}'>
     <span>{$field.label}</span>
     <select class="js-country" name="{$field.name}" {if $field.required}required{/if}>
       <option value disabled selected>{l s='-- please choose --' d='Shop.Forms.Labels'}</option>
@@ -24,7 +24,7 @@
 
 {else if $field.type === 'radio-buttons'}
 
-  <label class='radio-field {if $field.required}required{/if}'>
+  <label class='radio-field {if $field.required}required{/if} {if $field.errors|count}error{/if}'>
     <span>{$field.label}</span>
     {foreach from=$field.availableValues item="label" key="value"}
       <label>
@@ -42,7 +42,7 @@
 
 {elseif $field.type === 'checkbox'}
 
-  <label class='checkbox-field {if $field.required}required{/if}'>
+  <label class='checkbox-field {if $field.required}required{/if} {if $field.errors|count}error{/if}'>
     <input
       name="{$field.name}"
       type="checkbox"
@@ -55,7 +55,7 @@
 
 {elseif $field.type === 'password'}
 
-  <label {if $field.required}class="required"{/if}>
+  <label class='{if $field.required}required{/if} {if $field.errors|count}error{/if}'>
     <span>{$field.label}</span>
     <input
       name="{$field.name}"
@@ -72,7 +72,7 @@
 
 {else}
 
-  <label {if $field.required}class="required"{/if}>
+  <label class='{if $field.required}required{/if} {if $field.errors|count}error{/if}'>
     <span>{$field.label}</span>
     <input name="{$field.name}" type="{$field.type}" value="{$field.value}" {if $field.required}required{/if}>
   </label>

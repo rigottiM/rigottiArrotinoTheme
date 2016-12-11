@@ -1,0 +1,49 @@
+/*** Most of the customer accpunt pages ***/
+.page-customer-account {
+	#wrapper>nav {
+		display: none;
+	}
+}
+/*** Login page ***/
+.page-authentication {
+	#content {
+		#login_form_container {
+			header {
+				margin-top: 15px;
+			}
+		}
+
+		.register-form {
+			a {
+				@include link-as-button;
+			}
+		}
+	}
+}
+
+@media #{$tabletMediaQuery}, #{$desktopMediaQuery} {
+	/*** Login page ***/
+	.page-authentication {
+		#content {
+			width: 100%;
+			display: inline-block;
+
+			#register-container,
+			#login_form_container {
+				width: 49%;
+			}
+
+			#register-container {
+				float: left;
+			}
+
+			#login_form_container {
+				float: right;
+
+				header {
+					margin-top: 0;
+				}
+			}
+		}
+	}
+}

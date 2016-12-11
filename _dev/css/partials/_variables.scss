@@ -4,21 +4,28 @@ $site-min-width: 320px;
 // COLORS
 $white: #fff;
 $black: #000;
-$grey1: rgb(241, 241, 242);
-$grey2: rgb(235, 235, 237);
+$grey1: #f1f1f1;
+$grey2: #ebebeb;
 $grey4: #e1dfe4;
+$grey5: #cfcfcf;
 $grey-blue: #9b96a5;
+$greyAAA: #666;
+$grey666: #666;
+$grey333: #333;
 $light-blue: #50adeb;
 $light-blue-2: #4aa0d9;
 $blue: rgb(35, 47, 61);
 $links-color: #0066c0;
 $links-color-hover: #c45500;
 $bottom-header-color: #f4f3f7;
+$error-red: #cc0000;
 
 //FROMS
 $buttons-bg-color: $light-blue;
 $buttons-hover-bg-color: $light-blue-2;
 $buttons-color: $blue;
+$input-height: 36px;
+$input-width: 250px;
 
 //HEADER
 $main-header-horizontal-padding-mobile: 5px;
@@ -39,7 +46,6 @@ $menu-bg-color: $white;
 $menu-panel1-bg-color: $grey1;
 $menu-panel2-bg-color: $grey2;
 
-
 //MENU_BUTTON
 $menu-button-height: $top-header-buttons-size;
 $menu-button-width: $top-header-buttons-size;
@@ -56,10 +62,14 @@ $menu-layer-width-tabletDesktop: 350px;
 $menu-animation-duration: 400ms;
 $menu-animation-timing: cubic-bezier(.42,0,.58,1);
 
+//WRAPPER
+$padding-wrapper-mobile: 10px;
+$padding-wrapper-tabletDesktop: 20px;
+
 //MEDIA-QUERIES
-$mobileMediaQuery: "only screen and (max-device-width: 767px)";
-$tabletMediaQuery: "only screen and (min-device-width: 768px) and (max-device-width: 1023px)";
-$desktopMediaQuery: "only screen and (min-device-width: 1024px)";
+$mobileMediaQuery: "only screen and (max-width: 767px)";
+$tabletMediaQuery: "only screen and (min-width: 768px) and (max-width: 1023px)";
+$desktopMediaQuery: "only screen and (min-width: 1024px)";
 
 //Z-INDEX
 $header-z-index: 1000;

@@ -7,6 +7,8 @@ body {
 	font-family: arial,sans-serif;
 	font-size: 14px;
 	box-sizing: border-box;
+	text-size-adjust: none;
+	-webkit-text-size-adjust: none;
 }
 
 *, *:after, *:before {
@@ -21,12 +23,215 @@ a {
 	}
 }
 
+:focus {
+	outline: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin:0 0 10px;
+	font-weight:bold;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 18px;
+	border-bottom: 1px solid $grey4;
+	padding-bottom: 5px;
+}
+
+ul,
+ol {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+p {
+	text-align: justify;
+}
+
+// Forms
+input,
+select,
+textarea,
+button {
+	vertical-align:middle;
+}
+
+/* Fix: remove default formatting on iOS (e.g. rounded corners) */
+input, textarea, keygen, select, button {
+	font-size: 14px;
+	font-family: arial,sans-serif;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+textarea {
+	-webkit-appearance:none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+select,
+textarea {
+	background: $white;
+	border:1px solid $grey5;
+	color: $grey666;
+
+	/* Box model */
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	/* Remove default formatting, fix for iOS (rounded corners and shadow) */
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="url"] {
+	height: $input-height;
+}
+
+select {
+	height: $input-height;
+	width: $input-width;
+	padding: 8px;
+	text-overflow: ellipsis;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+textarea {
+	width: $input-width;
+	padding: 8px;
+	text-overflow: ellipsis;
+}
+
+select option {
+	padding-right: 10px;
+	padding-left: 5px;
+}
+
+select[multiple] option {
+	border-bottom: 1px solid $grey2;
+	padding: 2px 5px;
+}
+
+select[multiple] option:last-child {
+	border-bottom: 0;
+}
+
+textarea {
+	overflow: auto;
+}
+
+input[type="radio"] {
+	margin-right: 3px;
+}
+
+input[type="checkbox"] {
+	margin-right: 3px;
+}
+
+/* Active and others
+-------------------------------------------------------------- */
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="number"]:hover,
+input[type="password"]:hover,
+input[type="search"]:hover,
+input[type="tel"]:hover,
+input[type="url"]:hover,
+select:hover,
+textarea:hover, 
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+select:focus,
+textarea:focus {
+	border-color: $greyAAA;
+	color: $grey333;
+	outline: none;
+}
+
+input[type="text"]:disabled,
+input[type="email"]:disabled,
+input[type="number"]:disabled,
+input[type="password"]:disabled,
+input[type="search"]:disabled,
+input[type="tel"]:disabled,
+input[type="url"]:disabled,
+select:disabled,
+textarea:disabled {
+
+}
+
+label.required span:after {
+	content: '*'
+}
+
+.form-fields {
+	span {
+		display: inline-block;
+		margin: 2px 0;
+	}
+
+	input {
+		display: block;
+		margin-bottom: 3px;
+	}
+
+	.form-errors {
+		color: $error-red;
+		margin-bottom: 3px;
+	}
+
+	label.error {
+		input {
+			border-color: $error-red;
+		}
+	}
+}
+
 button {
 	background-color: $buttons-bg-color;
 	color: $buttons-color;
 	border: none;
 	border-radius: 4px;
 	line-height: 2.5em;
+	font-size: 16px;
+	font-weight: bold;
 	padding: 0 3em;
 	text-decoration: none;
 	cursor: pointer;
@@ -34,10 +239,4 @@ button {
 	&:hover {
 		background-color: $buttons-hover-bg-color;
 	}
-}
-
-ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
 }
