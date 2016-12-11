@@ -43,8 +43,6 @@
 	
 	&:nth-child(2) {
 		top: ($menu-button-height - $menu-piece-height) / 2;
-		opacity: 1;
-		transition: transform $menu-animation-duration $menu-animation-timing, opacity 0ms linear $menu-animation-duration / 2;
 	}
 	
 	&:nth-child(3) {
@@ -60,7 +58,6 @@
 	
 		&:nth-child(2) {
 			opacity: 0;
-			transition: transform $menu-animation-duration $menu-animation-timing, opacity 0ms linear $menu-animation-duration / 2;
 		}
 	
 		&:nth-child(3) {
