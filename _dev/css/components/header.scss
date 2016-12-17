@@ -132,6 +132,16 @@
 	}
 }
 
+@media #{$desktopMediaQuery} {
+	#main-header {
+		.top-header {
+			.text-search {
+				margin: 0 30px;
+			}
+		}
+	}
+}
+
 @media #{$tabletMediaQuery}, #{$desktopMediaQuery} {
 	#main-header {
 		.top-header {
@@ -147,7 +157,8 @@
 				height: $logo-height-tabletDesktop;
 				width: $logo-width-tabletDesktop;
 				margin-top: ($top-header-height - $logo-height-tabletDesktop)/2;
-				margin-left: $main-header-horizontal-padding-tabletDesktop + $menu-button-width;;
+				margin-left: $main-header-horizontal-padding-tabletDesktop + $menu-button-width;
+				flex:0 0 auto; /* Forces side columns to stay same width */
 			}
 
 			.show-text-search {
@@ -161,10 +172,11 @@
 				top: initial;
 				left: initial;
 				right: initial;
-				margin: 0 30px;
+				margin: 0 15px;
 				margin-top: ($top-header-height - $text-search-height)/2;
 				transition: initial;
 				z-index: initial;
+				flex:1 1 auto; /* Lets middle column shrink/grow to available width */
 
 				input[type="text"] {
 					border-radius: 4px 0 0 4px;
@@ -177,6 +189,10 @@
 				&.show {
 					top: initial;
 				}
+			}
+
+			.header-nav {
+				flex:0 0 auto; /* Forces side columns to stay same width */
 			}
 		}
 

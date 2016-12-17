@@ -6,7 +6,7 @@
   <section id="content" class="page-content page-authentication">
     {block name='register_form_container'}
       <header>
-        <h2>{l s='Create an account'}</h1>
+        <h1>{l s='Create an account'}</h1>
       </header>
       <p>{l s='Already have an account?'} <a href="{$urls.pages.authentication}">{l s='Log in instead!'}</a></p>
 

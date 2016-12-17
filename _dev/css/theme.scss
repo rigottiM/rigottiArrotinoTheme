@@ -14,6 +14,8 @@
 
 @media #{$tabletMediaQuery}, #{$desktopMediaQuery} {
 	#wrapper {
+		margin: 0 auto;
+		max-width: $site-max-width;
 		margin-top: $main-header-height-tabletDesktop;
 		padding: $padding-wrapper-tabletDesktop;
 	}

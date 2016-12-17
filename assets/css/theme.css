@@ -38,23 +38,29 @@ h6 {
   text-transform: uppercase; }
 
 /* line 41, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
+h1 {
+  font-size: 21px;
+  border-bottom: 1px solid #e1dfe4;
+  padding-bottom: 5px; }
+
+/* line 47, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
 h2 {
   font-size: 18px;
   border-bottom: 1px solid #e1dfe4;
   padding-bottom: 5px; }
 
-/* line 47, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
+/* line 53, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
 ul,
 ol {
   list-style: none;
   padding: 0;
   margin: 0; }
 
-/* line 54, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
+/* line 60, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
 p {
   text-align: justify; }
 
-/* line 59, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
+/* line 65, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
 input,
 select,
 textarea,
@@ -62,12 +68,12 @@ button {
   vertical-align: middle; }
 
 /* Fix: remove default formatting on iOS (e.g. rounded corners) */
-/* line 67, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
+/* line 73, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
 input, textarea, keygen, select, button {
   font-size: 14px;
   font-family: arial,sans-serif; }
 
-/* line 72, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
+/* line 78, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
 input[type="text"],
 input[type="email"],
 input[type="number"],
@@ -78,7 +84,7 @@ input[type="url"],
 textarea {
   -webkit-appearance: none; }
 
-/* line 83, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
+/* line 89, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
 input[type="text"],
 input[type="email"],
 input[type="number"],
@@ -100,7 +106,7 @@ textarea {
   -webkit-box-shadow: none;
   box-shadow: none; }
 
-/* line 107, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
+/* line 113, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
 input[type="text"],
 input[type="email"],
 input[type="number"],
@@ -110,14 +116,14 @@ input[type="tel"],
 input[type="url"] {
   height: 36px; }
 
-/* line 117, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
+/* line 123, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
 select {
   height: 36px;
   width: 250px;
   padding: 8px;
   text-overflow: ellipsis; }
 
-/* line 124, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
+/* line 130, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
 input[type="text"],
 input[type="email"],
 input[type="number"],
@@ -130,37 +136,37 @@ textarea {
   padding: 8px;
   text-overflow: ellipsis; }
 
-/* line 137, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
+/* line 143, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
 select option {
   padding-right: 10px;
   padding-left: 5px; }
 
-/* line 142, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
+/* line 148, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
 select[multiple] option {
   border-bottom: 1px solid #ebebeb;
   padding: 2px 5px; }
 
-/* line 147, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
+/* line 153, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
 select[multiple] option:last-child {
   border-bottom: 0; }
 
-/* line 151, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
+/* line 157, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
 textarea {
   overflow: auto; }
 
-/* line 155, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
+/* line 161, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
 input[type="radio"] {
   margin-right: 3px;
   margin-left: 0; }
 
-/* line 160, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
+/* line 166, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
 input[type="checkbox"] {
   margin-right: 3px;
   margin-left: 0; }
 
 /* Active and others
 -------------------------------------------------------------- */
-/* line 167, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
+/* line 173, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
 input[type="text"]:hover,
 input[type="email"]:hover,
 input[type="number"]:hover,
@@ -183,51 +189,51 @@ textarea:focus {
   color: #333;
   outline: none; }
 
-/* line 202, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
+/* line 208, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
 label.required span:after {
   content: '*'; }
 
-/* line 207, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
+/* line 213, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
 .form-fields span {
   display: inline-block;
   margin: 2px 0; }
 
-/* line 212, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
+/* line 218, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
 .form-fields input {
   display: block;
   margin-bottom: 5px; }
 
-/* line 217, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
+/* line 223, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
 .form-fields .form-errors {
   color: #cc0000;
   margin-bottom: 5px; }
 
-/* line 223, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
+/* line 229, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
 .form-fields label.error input {
   border-color: #cc0000; }
 
-/* line 228, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
+/* line 234, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
 .form-fields .radio-field {
   display: block; }
-  /* line 231, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
+  /* line 237, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
   .form-fields .radio-field span {
     display: block; }
-  /* line 235, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
+  /* line 241, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
   .form-fields .radio-field input {
     display: initial; }
-  /* line 239, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
+  /* line 245, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
   .form-fields .radio-field label {
     margin-right: 20px; }
 
-/* line 245, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
+/* line 251, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
 .form-fields .checkbox-field input {
   display: inline-block; }
 
-/* line 249, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
+/* line 255, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
 .form-fields .checkbox-field span {
   margin: 15px 0; }
 
-/* line 255, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
+/* line 261, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
 button {
   background-color: #50adeb;
   color: #232f3d;
@@ -239,7 +245,7 @@ button {
   padding: 0 3em;
   text-decoration: none;
   cursor: pointer; }
-  /* line 267, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
+  /* line 273, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/partials/_commons.scss */
   button:hover {
     background-color: #4aa0d9; }
 
@@ -662,25 +668,32 @@ button {
     opacity: 0.9;
     padding: 0 5px; }
 
+@media only screen and (min-width: 1024px) {
+  /* line 138, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/header.scss */
+  #main-header .top-header .text-search {
+    margin: 0 30px; } }
+
 @media only screen and (min-width: 768px) and (max-width: 1023px), only screen and (min-width: 1024px) {
-  /* line 137, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/header.scss */
+  /* line 147, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/header.scss */
   #main-header .top-header {
     display: flex;
     justify-content: space-between;
     padding: 0 25px; }
-    /* line 142, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/header.scss */
+    /* line 152, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/header.scss */
     #main-header .top-header .burger-menu {
       left: 25px; }
-    /* line 146, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/header.scss */
+    /* line 156, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/header.scss */
     #main-header .top-header .logo {
       height: 45px;
       width: 150px;
       margin-top: 10.5px;
-      margin-left: 65px; }
-    /* line 153, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/header.scss */
+      margin-left: 65px;
+      flex: 0 0 auto;
+      /* Forces side columns to stay same width */ }
+    /* line 164, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/header.scss */
     #main-header .top-header .show-text-search {
       display: none; }
-    /* line 157, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/header.scss */
+    /* line 168, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/header.scss */
     #main-header .top-header .text-search {
       width: 32%;
       position: relative;
@@ -688,35 +701,42 @@ button {
       top: initial;
       left: initial;
       right: initial;
-      margin: 0 30px;
+      margin: 0 15px;
       margin-top: 15px;
       transition: initial;
-      z-index: initial; }
-      /* line 169, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/header.scss */
+      z-index: initial;
+      flex: 1 1 auto;
+      /* Lets middle column shrink/grow to available width */ }
+      /* line 181, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/header.scss */
       #main-header .top-header .text-search input[type="text"] {
         border-radius: 4px 0 0 4px; }
-      /* line 173, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/header.scss */
+      /* line 185, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/header.scss */
       #main-header .top-header .text-search button {
         border-radius: 0 4px 4px 0; }
-      /* line 177, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/header.scss */
+      /* line 189, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/header.scss */
       #main-header .top-header .text-search.show {
         top: initial; }
-  /* line 183, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/header.scss */
+    /* line 194, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/header.scss */
+    #main-header .top-header .header-nav {
+      flex: 0 0 auto;
+      /* Forces side columns to stay same width */ }
+  /* line 199, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/header.scss */
   #main-header .bottom-header {
     display: block;
     padding: 0 25px; } }
 
 /*** Most of the customer accpunt pages ***/
-/* line 3, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/customer.scss */
-.page-customer-account #wrapper > nav {
+/* line 4, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/customer.scss */
+.page-customer-account #wrapper > nav,
+.page-my-account #wrapper > nav {
   display: none; }
 
 /*** Login page ***/
-/* line 11, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/customer.scss */
+/* line 12, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/customer.scss */
 .page-authentication #content #login_form_container header {
   margin-top: 15px; }
 
-/* line 17, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/customer.scss */
+/* line 18, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/customer.scss */
 .page-authentication #content .register-form a {
   display: inline-block;
   text-align: center;
@@ -736,21 +756,21 @@ button {
 
 @media only screen and (min-width: 768px) and (max-width: 1023px), only screen and (min-width: 1024px) {
   /*** Login page ***/
-  /* line 27, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/customer.scss */
+  /* line 28, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/customer.scss */
   .page-authentication #content {
     width: 100%;
     display: inline-block; }
-    /* line 31, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/customer.scss */
+    /* line 32, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/customer.scss */
     .page-authentication #content #register-container,
     .page-authentication #content #login_form_container {
       width: 49%; }
-    /* line 36, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/customer.scss */
+    /* line 37, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/customer.scss */
     .page-authentication #content #register-container {
       float: left; }
-    /* line 40, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/customer.scss */
+    /* line 41, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/customer.scss */
     .page-authentication #content #login_form_container {
       float: right; }
-      /* line 43, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/customer.scss */
+      /* line 44, /Users/matteo/Documents/Workspace/rigottiArrotinoTheme/_dev/css/components/customer.scss */
       .page-authentication #content #login_form_container header {
         margin-top: 0; } }
 
@@ -766,6 +786,8 @@ button {
 @media only screen and (min-width: 768px) and (max-width: 1023px), only screen and (min-width: 1024px) {
   /* line 16, stdin */
   #wrapper {
+    margin: 0 auto;
+    max-width: 1500px;
     margin-top: 96px;
     padding: 20px; } }
 
