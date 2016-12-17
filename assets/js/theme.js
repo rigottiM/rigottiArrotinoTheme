@@ -45,7 +45,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1);
-	module.exports = __webpack_require__(9);
+	module.exports = __webpack_require__(10);
 
 
 /***/ },
@@ -66,15 +66,15 @@
 	
 	var _showTextSearchButton2 = _interopRequireDefault(_showTextSearchButton);
 	
-	var _menuLayer = __webpack_require__(22);
+	var _menuLayer = __webpack_require__(7);
 	
 	var _menuLayer2 = _interopRequireDefault(_menuLayer);
 	
-	var _prestashop = __webpack_require__(7);
+	var _prestashop = __webpack_require__(8);
 	
 	var _prestashop2 = _interopRequireDefault(_prestashop);
 	
-	var _events = __webpack_require__(8);
+	var _events = __webpack_require__(9);
 	
 	var _events2 = _interopRequireDefault(_events);
 	
@@ -10047,12 +10047,68 @@
 
 /***/ },
 /* 7 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _jquery = __webpack_require__(4);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	var menuLayerManager = function () {
+		function menuLayerManager() {
+			_classCallCheck(this, menuLayerManager);
+		}
+	
+		_createClass(menuLayerManager, [{
+			key: "init",
+			value: function init() {
+				var $menuLayer = (0, _jquery2.default)(".menu-layer"),
+				    categorySelector = ".category",
+				    panelSelector = ".panel";
+	
+				/*$menuLayer.find(categorySelector).mouseenter(function() {
+	   	console.log("enter");
+	   	$(this).children(panelSelector).addClass("open");
+	   });
+	   $menuLayer.find(categorySelector).mouseleave(function() {
+	   	console.log("leave");
+	   	$(this).find(panelSelector).removeClass("open");
+	   });*/
+	
+				$menuLayer.find(categorySelector).hover(function () {
+					console.log("open");
+					(0, _jquery2.default)(this).children(panelSelector).addClass("open");
+				}, function () {
+					console.log("close");
+					(0, _jquery2.default)(this).find(panelSelector).removeClass("open");
+				});
+			}
+		}]);
+	
+		return menuLayerManager;
+	}();
+	
+	exports.default = menuLayerManager;
+
+/***/ },
+/* 8 */
 /***/ function(module, exports) {
 
 	module.exports = prestashop;
 
 /***/ },
-/* 8 */
+/* 9 */
 /***/ function(module, exports) {
 
 	// Copyright Joyent, Inc. and other Node contributors.
@@ -10360,78 +10416,10 @@
 
 
 /***/ },
-/* 9 */
+/* 10 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 10 */,
-/* 11 */,
-/* 12 */,
-/* 13 */,
-/* 14 */,
-/* 15 */,
-/* 16 */,
-/* 17 */,
-/* 18 */,
-/* 19 */,
-/* 20 */,
-/* 21 */,
-/* 22 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _jquery = __webpack_require__(4);
-	
-	var _jquery2 = _interopRequireDefault(_jquery);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	var menuLayerManager = function () {
-		function menuLayerManager() {
-			_classCallCheck(this, menuLayerManager);
-		}
-	
-		_createClass(menuLayerManager, [{
-			key: "init",
-			value: function init() {
-				var $menuLayer = (0, _jquery2.default)(".menu-layer"),
-				    categorySelector = ".category",
-				    panelSelector = ".panel";
-	
-				/*$menuLayer.find(categorySelector).mouseenter(function() {
-	   	console.log("enter");
-	   	$(this).children(panelSelector).addClass("open");
-	   });
-	   $menuLayer.find(categorySelector).mouseleave(function() {
-	   	console.log("leave");
-	   	$(this).find(panelSelector).removeClass("open");
-	   });*/
-	
-				$menuLayer.find(categorySelector).hover(function () {
-					console.log("open");
-					(0, _jquery2.default)(this).children(panelSelector).addClass("open");
-				}, function () {
-					console.log("close");
-					(0, _jquery2.default)(this).find(panelSelector).removeClass("open");
-				});
-			}
-		}]);
-	
-		return menuLayerManager;
-	}();
-	
-	exports.default = menuLayerManager;
 
 /***/ }
 /******/ ]);

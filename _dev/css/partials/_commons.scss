@@ -154,10 +154,12 @@ textarea {
 
 input[type="radio"] {
 	margin-right: 3px;
+	margin-left: 0;
 }
 
 input[type="checkbox"] {
 	margin-right: 3px;
+	margin-left: 0;
 }
 
 /* Active and others
@@ -209,17 +211,43 @@ label.required span:after {
 
 	input {
 		display: block;
-		margin-bottom: 3px;
+		margin-bottom: 5px;
 	}
 
 	.form-errors {
 		color: $error-red;
-		margin-bottom: 3px;
+		margin-bottom: 5px;
 	}
 
 	label.error {
 		input {
 			border-color: $error-red;
+		}
+	}
+
+	.radio-field {
+		display: block;
+
+		span {
+			display: block;
+		}
+
+		input {
+			display: initial;
+		}
+
+		label {
+			margin-right: 20px;
+		}
+	}
+
+	.checkbox-field {
+		input {
+			display: inline-block;
+		}
+
+		span {
+			margin: 15px 0;
 		}
 	}
 }
