@@ -1,10 +1,53 @@
 /*** Most of the customer accpunt pages ***/
 .page-customer-account,
-.page-my-account {
+.page-my-account,
+.page-addresses {
 	#wrapper>nav {
 		display: none;
 	}
+
+	.my-account-links {
+		margin-top: 20px;
+
+		li {
+			float: left;
+			margin-right: 30px;
+		}
+	}
+
+	.page-content.page-addresses {
+		article.address {
+			background-color: $grey2;
+			margin-bottom: 10px;
+			padding: 10px;
+			padding-bottom: 26px;
+
+			footer {
+				width: auto;
+				margin: 0;
+
+				li:first-child {
+					float: left;
+				}
+
+				li:last-child {
+					float: right;
+				}
+			}
+		}
+
+		footer {
+			width: 100%;
+			margin-top: 15px;
+			text-align: center;
+
+			a[data-link-action='add-address'] {
+				@include link-as-button;
+			}
+		}
+	}
 }
+
 /*** Login page ***/
 .page-authentication {
 	#content {
@@ -22,7 +65,38 @@
 	}
 }
 
+
+
 @media #{$tabletMediaQuery}, #{$desktopMediaQuery} {
+	.page-customer-account,
+	.page-my-account,
+	.page-addresses {
+		.page-content.page-addresses {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+
+			article.address {
+				position: relative;
+				width: 250px;
+				margin: 5px;
+
+				footer {
+					position: absolute;
+					bottom: 10px;
+					width: 230px;
+				}
+			}
+
+			footer {
+				margin: 5px;
+				margin-top: 15px;
+				text-align: left;
+			}
+		}
+	}
+
 	/*** Login page ***/
 	.page-authentication {
 		#content {

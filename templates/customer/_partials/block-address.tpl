@@ -1,6 +1,6 @@
 <article id="address-{$address.id}" class="address" data-id-address="{$address.id}">
   <header>
-    <h1 class="h4">{$address.alias}</h1>
+    <h4 class="h4">{$address.alias}</h4>
   </header>
 
   <p>{$address.formatted nofilter}</p>
