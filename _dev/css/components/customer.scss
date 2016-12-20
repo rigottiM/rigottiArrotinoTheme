@@ -71,6 +71,22 @@
 	.page-customer-account,
 	.page-my-account,
 	.page-addresses {
+
+		#wrapper {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+
+			#left-column {
+				flex: 0 0 200px;
+			}
+
+			#content-wrapper {
+				margin-left: 20px;
+				flex: 1 1;
+			}
+		}
+
 		.page-content.page-addresses {
 			display: flex;
 			flex-direction: row;
